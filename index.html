@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil Académico y CV</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e6f7ff;
+            color: #2c3e50;
+            margin: 0;
+            padding: 30px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 168, 204, 0.15);
+            border-top: 6px solid #00a8cc;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid #e0f2fe;
+            padding-bottom: 25px;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #00a8cc;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 15px 0 5px;
+            color: #005f73;
+        }
+
+        .subtitle {
+            color: #0088a3;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 5px;
+            padding: 8px 16px;
+            background-color: #e0f7fa;
+            color: #007791;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: #00a8cc;
+            color: #ffffff;
+        }
+
+        h2 {
+            color: #005f73;
+            border-left: 5px solid #00a8cc;
+            padding-left: 12px;
+            margin-top: 35px;
+            font-size: 1.4rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: #f4fbfd;
+            border: 1px solid #bbeeef;
+            margin: 10px 0;
+            padding: 14px 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        li a {
+            color: #0088a3;
+            text-decoration: none;
+            font-weight: bold;
+            background: #ffffff;
+            padding: 6px 14px;
+            border-radius: 6px;
+            border: 1px solid #00a8cc;
+            transition: 0.3s;
+        }
+
+        li a:hover {
+            background: #00a8cc;
+            color: #ffffff;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 22px;
+            }
+
+            li {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <img src="Gemini_Generated_Image_4wwvn44wwvn44wwv.jpg"
+             alt="Foto de perfil" class="profile-img">
+
+        <h1>Camila Alexandra Rubina Salas</h1>
+
+        <p class="subtitle">
+            Estudiante de Administración de Empresas
+            en la Universidad Católica San Pablo
+        </p>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/angeles-gabriela-vilca-choque-53a967449"
+               target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+            <a href="https://github.com/angelesvilca"
+               target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>Sobre mí</h2>
+
+        <p>
+            Soy una estudiante universitaria con interés en desarrollar
+            mis habilidades y conocimientos en el ámbito profesional.
+            Me considero una persona responsable, creativa, organizada
+            y comprometida, con facilidad para trabajar en equipo,
+            aprender constantemente y afrontar nuevos desafíos.
+            Quiero crecer profesionalmente, aportar ideas y generar
+            un impacto positivo en cada proyecto en el que participe.
+        </p>
+    </section>
+
+    <section>
+        <h2>Mis Profesores</h2>
+
+        <ul>
+            <li>
+                <span>
+                    <strong>Introducción a la Computación:</strong>
+                    Ernesto Cuadros Vargas
+                </span>
+
+                <a href="https://www.linkedin.com/in/ecuadrosv/"
+                   target="_blank" rel="noopener noreferrer">
+                    LinkedIn del Profesor
+                </a>
+            </li>
+
+            <li>
+                <span>
+                    <strong>Matemática Financiera:</strong>
+                    Belén Bochio Linares
+                </span>
+
+                <a href="https://www.linkedin.com/in/claudia-calisaya-carpio-5821a3"
+                   target="_blank" rel="noopener noreferrer">
+                    LinkedIn del Profesor
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Páginas de mis Compañeros</h2>
+
+        <ul>
+            <li>
+                <span>Christian Colonio</span>
+
+                <a href="https://www.linkedin.com/in/christian-colonio-633311436/"
+                   target="_blank" rel="noopener noreferrer">
+                    Ver perfil
+                </a>
+            </li>
+
+            <li>
+                <span>Lucciana Cruz Guzmán</span>
+
+                <a href="https://www.linkedin.com/in/luccianna-cruz-guzmán-b3a9b1449?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                   target="_blank" rel="noopener noreferrer">
+                    Ver perfil
+                </a>
+            </li>
+        </ul>
+    </section>
+
+</div>
+
+</body>
+</html>
