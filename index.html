@@ -1,215 +1,371 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Perfil Académico y CV</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Perfil Académico y CV — Camila Alexandra Rubina Salas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-page: #F9F7FC;
+      --bg-card: #FFFFFF;
+      --pastel-purple: #EDE7F6;
+      --pastel-purple-hover: #E1D6F3;
+      --accent-purple: #6A4C93;
+      --dark-purple: #261638;
+      --text-main: #2A2136;
+      --text-muted: #645875;
+      --border-subtle: #E6DFF0;
+    }
 
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #d8b4fe;
-            color: #4c1d95;
-            margin: 0;
-            padding: 30px 20px;
-            display: flex;
-            justify-content: center;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        .container {
-            max-width: 800px;
-            width: 100%;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(0, 168, 204, 0.15);
-            border-top: 6px solid #00a8cc;
-        }
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      padding: 3rem 1.5rem;
+    }
 
-        header {
-            text-align: center;
-            border-bottom: 2px solid #e0f2fe;
-            padding-bottom: 25px;
-        }
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 18px;
+      box-shadow: 0 12px 36px rgba(38, 22, 56, 0.05);
+      overflow: hidden;
+    }
 
-        .profile-img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #00a8cc;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+    /* Cabecera Académica */
+    header {
+      background: linear-gradient(180deg, var(--pastel-purple) 0%, #F5F1FB 100%);
+      padding: 3.25rem 3rem 2.75rem;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      gap: 2.25rem;
+    }
 
-        h1 {
-            margin: 15px 0 5px;
-            color: #005f73;
-        }
+    .avatar-wrapper {
+      flex-shrink: 0;
+      width: 126px;
+      height: 126px;
+      border-radius: 50%;
+      padding: 4px;
+      background-color: var(--bg-card);
+      border: 1.5px solid #D3C4E8;
+      box-shadow: 0 6px 18px rgba(38, 22, 56, 0.08);
+    }
 
-        .subtitle {
-            color: #0088a3;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
+    .avatar-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+    }
 
-        .social-links a {
-            display: inline-block;
-            margin: 0 5px;
-            padding: 8px 16px;
-            background-color: #e0f7fa;
-            color: #007791;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 20px;
-            transition: 0.3s;
-        }
+    .header-info {
+      flex: 1;
+    }
 
-        .social-links a:hover {
-            background-color: #00a8cc;
-            color: #ffffff;
-        }
+    .eyebrow {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-purple);
+      margin-bottom: 0.45rem;
+    }
 
-        h2 {
-            color: #005f73;
-            border-left: 5px solid #00a8cc;
-            padding-left: 12px;
-            margin-top: 35px;
-            font-size: 1.4rem;
-        }
+    h1 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 2.25rem;
+      font-weight: 600;
+      color: var(--dark-purple);
+      line-height: 1.18;
+      margin-bottom: 0.5rem;
+    }
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
+    .subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      margin-bottom: 1.25rem;
+    }
 
-        li {
-            background: #f4fbfd;
-            border: 1px solid #bbeeef;
-            margin: 10px 0;
-            padding: 14px 20px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
 
-        li a {
-            color: #0088a3;
-            text-decoration: none;
-            font-weight: bold;
-            background: #ffffff;
-            padding: 6px 14px;
-            border-radius: 6px;
-            border: 1px solid #00a8cc;
-            transition: 0.3s;
-        }
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.5rem 1.05rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
 
-        li a:hover {
-            background: #00a8cc;
-            color: #ffffff;
-        }
+    .btn-primary {
+      background-color: var(--dark-purple);
+      color: #FFFFFF;
+    }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 22px;
-            }
+    .btn-primary:hover {
+      background-color: var(--accent-purple);
+      transform: translateY(-1px);
+    }
 
-            li {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-    </style>
+    .btn-secondary {
+      background-color: var(--bg-card);
+      color: var(--dark-purple);
+      border: 1px solid #D4C5E8;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--pastel-purple-hover);
+      border-color: var(--accent-purple);
+      transform: translateY(-1px);
+    }
+
+    /* Contenido Principal */
+    main {
+      padding: 2.75rem 3rem 3.25rem;
+    }
+
+    section {
+      margin-bottom: 2.75rem;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--dark-purple);
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border-subtle);
+      margin-bottom: 1.25rem;
+    }
+
+    .about-text {
+      font-size: 0.98rem;
+      color: var(--text-main);
+      text-align: left;
+    }
+
+    /* Listas de Profesores y Compañeros */
+    .directory-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .directory-item {
+      background-color: #FCFAFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 1.05rem 1.3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .directory-item:hover {
+      border-color: #CBB8E6;
+      background-color: #F7F2FD;
+    }
+
+    .item-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .course-tag {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-purple);
+    }
+
+    .person-name {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--dark-purple);
+    }
+
+    .item-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      flex-shrink: 0;
+    }
+
+    .chip-link {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--dark-purple);
+      background-color: var(--pastel-purple);
+      padding: 0.38rem 0.85rem;
+      border-radius: 8px;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .chip-link:hover {
+      background-color: var(--dark-purple);
+      color: #FFFFFF;
+    }
+
+    /* Responsivo */
+    @media (max-width: 640px) {
+      body {
+        padding: 1.25rem 0.85rem;
+      }
+
+      header {
+        flex-direction: column;
+        text-align: center;
+        padding: 2.25rem 1.5rem 2rem;
+        gap: 1.25rem;
+      }
+
+      h1 {
+        font-size: 1.85rem;
+      }
+
+      .social-links {
+        justify-content: center;
+      }
+
+      main {
+        padding: 2rem 1.5rem 2.25rem;
+      }
+
+      .directory-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .item-actions {
+        margin-top: 0.35rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
-
+  <div class="container">
     <header>
-        <img src="Perfil.jpg.JPG"
-             alt="Foto de perfil" class="profile-img">
-
+      <div class="avatar-wrapper">
+        <img src="Perfil.jpg.JPG" alt="Foto de perfil de Camila Alexandra Rubina Salas">
+      </div>
+      <div class="header-info">
+        <p class="eyebrow">Mi Perfil Académico y CV</p>
         <h1>Camila Alexandra Rubina Salas</h1>
-
-        <p class="subtitle">
-            Estudiante de Administración de Empresas
-            en la Universidad Católica San Pablo
-        </p>
-
+        <p class="subtitle">Estudiante de Administración de Empresas en la Universidad Católica San Pablo</p>
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/camila-alexandra-rubina-salas-037a02449" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-
-           <a href="https://github.com/camilarubinasalas-crypto" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/camila-alexandra-rubina-salas-037a02449" target="_blank" rel="noopener noreferrer" class="btn-link btn-primary">
+            LinkedIn
+          </a>
+          <a href="https://github.com/camilarubinasalas-crypto" target="_blank" rel="noopener noreferrer" class="btn-link btn-secondary">
+            GitHub
+          </a>
         </div>
+      </div>
     </header>
 
-    <section>
-        <h2>Sobre mí</h2>
-
-        <p>
-            Soy una estudiante universitaria con interés en desarrollar
-            mis habilidades y conocimientos en el ámbito profesional.
-            Me considero una persona responsable, creativa, organizada
-            y comprometida, con facilidad para trabajar en equipo,
-            aprender constantemente y afrontar nuevos desafíos.
-            Quiero crecer profesionalmente, aportar ideas y generar
-            un impacto positivo en cada proyecto en el que participe.
+    <main>
+      <section aria-labelledby="sobre-mi-heading">
+        <h2 id="sobre-mi-heading">Sobre mí</h2>
+        <p class="about-text">
+          Soy una estudiante universitaria con interés en desarrollar mis habilidades y conocimientos en el ámbito profesional. Me considero una persona responsable, creativa, organizada y comprometida, con facilidad para trabajar en equipo, aprender constantemente y afrontar nuevos desafíos. Quiero crecer profesionalmente, aportar ideas y generar un impacto positivo en cada proyecto en el que participe.
         </p>
-    </section>
+      </section>
 
-    <section>
-        <h2>Mis Profesores</h2>
+      <section aria-labelledby="profesores-heading">
+        <h2 id="profesores-heading">Mis Profesores</h2>
+        <ul class="directory-list">
+          <li class="directory-item">
+            <div class="item-details">
+              <span class="course-tag">Introducción a la Computación</span>
+              <span class="person-name">Ernesto Cuadros Vargas</span>
+            </div>
+            <div class="item-actions">
+              <a href="https://socios.spc.org.pe/ecuadros/" target="_blank" rel="noopener noreferrer" class="chip-link">Página Web</a>
+              <a href="https://www.linkedin.com/in/ernesto-cuadros-vargas" target="_blank" rel="noopener noreferrer" class="chip-link">LinkedIn</a>
+            </div>
+          </li>
 
-        <ul>
-<li>
-    <span>
-        <strong>Introducción a la Computación:</strong>
-        Ernesto Cuadros Vargas
-    </span>
-    
-    <!-- Enlace a su página web -->
-    <a href="https://socios.spc.org.pe/ecuadros/" rel="noopener noreferrer" target="_blank">
-        Página Web
-    </a>
-
-    <!-- Enlace a su LinkedIn (añadido) -->
-    <a href="https://www.linkedin.com/in/ernesto-cuadros-vargas" rel="noopener noreferrer" target="_blank">
-        LinkedIn
-    </a>
-</li>
-
-            <li>
-    <span>María Belén Bochio Linares</span>
-    <a href="https://www.linkedin.com/in/maría-belén-bocchio-linares-96846035" rel="noopener noreferrer" target="_blank">LinkedIn</a>
-</li>
+          <li class="directory-item">
+            <div class="item-details">
+              <span class="person-name">María Belén Bochio Linares</span>
+            </div>
+            <div class="item-actions">
+              <a href="https://www.linkedin.com/in/maría-belén-bocchio-linares-96846035" target="_blank" rel="noopener noreferrer" class="chip-link">LinkedIn</a>
+            </div>
+          </li>
         </ul>
-    </section>
+      </section>
 
-    <section>
-        <h2>Páginas de mis Compañeros</h2>
+      <section aria-labelledby="companeros-heading">
+        <h2 id="companeros-heading">Páginas de mis Compañeros</h2>
+        <ul class="directory-list">
+          <li class="directory-item">
+            <div class=https://www.linkedin.com/in/luccianna-antonella-cruz-guzmán-b3a9b1449?utm_source=share_via&utm_content=profile&utm_medium=member_ioshttps://www.linkedin.com/in/luccianna-antonella-cruz-guzmán-b3a9b1449?utm_source=share_via&utm_content=profile&utm_medium=member_ios"item-details">
+              <span class="person-name">Christian Colonio</span>
+            </div>
+            <div class="item-actions">
+                 <a href="https://coloniocl.github.io/ChristianColonio/" target="_blank" rel="noopener noreferrer" class="chip-link">Página Web</a>
+              <a href="https://www.linkedin.com/in/christian-colonio-633311436/" target="_blank" rel="noopener noreferrer" class="chip-link">Ver perfil</a>
+            </div>
+          </li>
 
-        <ul>
-            <li>
-                <span>Christian Colonio</span>
+          <li class="directory-item">
+            <div class="item-details">
+              <span class="person-name">Lucciana Cruz Guzmán</span>
+            </div>
+            <div class="item-actions">
+                <a href="https://lulucg1509-sys.github.io/LucciannaCruzGuzman.github.io/" target="_blank" rel="noopener noreferrer" class="chip-link">Página Web</a>
+              <a href="https://www.linkedin.com/in/luccianna-antonella-cruz-guzmán-b3a9b1449?utm_source=share_via&utm_content=profile&utm_medium=member_ios">LinkedIn</a>
+            </div>
+          <li class="directory-item">
+            <div class="item-details">
+              <span class="person-name">Angeles Vilca Choque </span>
+            </div>
+            <div class="item-actions">
+              <a href="https://www.linkedin.com/in/angeles-gabriela-vilca-choque-53a967449/" target="_blank" rel="noopener noreferrer" class="chip-link">Ver perfil</a>
+            </div>
+          </li>
 
-                <a href="https://www.linkedin.com/in/christian-colonio-633311436/"
-                   target="_blank" rel="noopener noreferrer">
-                    Ver perfil
-                </a>
-            </li>
-
-            <li>
-    <span>Lucciana Cruz Guzmán</span>
-    <a href="https://www.linkedin.com/in/luccianna-cruz-guzmán-b3a9b1449" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-</li>
         </ul>
-    </section>
-
-</div>
+      </section>
+    </main>
+  </div>
 
 </body>
 </html>
